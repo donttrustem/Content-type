@@ -1,0 +1,2433 @@
+$data = array(
+  'bundles' => array(
+    'property' => (object) array(
+      'type' => 'property',
+      'name' => 'Property',
+      'base' => 'node_content',
+      'module' => 'node',
+      'description' => '',
+      'help' => 'The Address suggested structure is: Number, Street, City, Estate, Postal Code.
+2113 St. Abbey Ln Raleigh NC, 33200',
+      'has_title' => '1',
+      'title_label' => 'Property Address',
+      'custom' => '1',
+      'modified' => '1',
+      'locked' => '0',
+      'disabled' => '0',
+      'orig_type' => 'car',
+      'disabled_changed' => FALSE,
+      'bc_entity_type' => 'node',
+    ),
+  ),
+  'fields' => array(
+    'body' => array(
+      'entity_types' => array(
+        0 => 'node',
+      ),
+      'translatable' => '0',
+      'settings' => array(),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_body' => array(
+                'value' => 'body_value',
+                'summary' => 'body_summary',
+                'format' => 'body_format',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_body' => array(
+                'value' => 'body_value',
+                'summary' => 'body_summary',
+                'format' => 'body_format',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'table' => 'filter_format',
+          'columns' => array(
+            'format' => 'format',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'field_name' => 'body',
+      'type' => 'text_with_summary',
+      'module' => 'text',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'text',
+          'size' => 'big',
+          'not null' => FALSE,
+        ),
+        'summary' => array(
+          'type' => 'text',
+          'size' => 'big',
+          'not null' => FALSE,
+        ),
+        'format' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'page',
+          1 => 'article',
+          2 => 'property',
+          3 => 'webform',
+          4 => 'customer_comment',
+          5 => 'home_item',
+          6 => 'home_feature',
+          7 => 'migrate_example_beer',
+          8 => 'migrate_example_wine',
+          9 => 'migrate_example_producer',
+        ),
+      ),
+    ),
+    'field_agent' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'agent',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_agent' => array(
+                'tid' => 'field_agent_tid',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_agent' => array(
+                'tid' => 'field_agent_tid',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'field_name' => 'field_agent',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'tid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_bathrooms' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'bathrooms',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_bathrooms' => array(
+                'tid' => 'field_bathrooms_tid',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_bathrooms' => array(
+                'tid' => 'field_bathrooms_tid',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'field_name' => 'field_bathrooms',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'tid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_bedrooms' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'beds',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_bedrooms' => array(
+                'tid' => 'field_bedrooms_tid',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_bedrooms' => array(
+                'tid' => 'field_bedrooms_tid',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'field_name' => 'field_bedrooms',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'tid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_cee_epc' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          'In Progress' => 'In Progress',
+          'A' => 'A',
+          'B' => 'B',
+          'C' => 'C',
+          'D' => 'D',
+          'E' => 'E',
+          'F' => 'F',
+          'G' => 'G',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_cee_epc' => array(
+                'value' => 'field_cee_epc_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_cee_epc' => array(
+                'value' => 'field_cee_epc_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'field_name' => 'field_cee_epc',
+      'type' => 'list_text',
+      'module' => 'list',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_garages' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '0',
+          1 => '1',
+          2 => '2',
+          3 => '3',
+          4 => '4',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_garages' => array(
+                'value' => 'field_garages_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_garages' => array(
+                'value' => 'field_garages_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'field_name' => 'field_garages',
+      'type' => 'list_integer',
+      'module' => 'list',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_home_features' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'home_features',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_home_features' => array(
+                'tid' => 'field_home_features_tid',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_home_features' => array(
+                'tid' => 'field_home_features_tid',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'field_name' => 'field_home_features',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'tid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_image' => array(
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'settings' => array(
+        'uri_scheme' => 'public',
+        'default_image' => 0,
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_image' => array(
+                'fid' => 'field_image_fid',
+                'alt' => 'field_image_alt',
+                'title' => 'field_image_title',
+                'width' => 'field_image_width',
+                'height' => 'field_image_height',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_image' => array(
+                'fid' => 'field_image_fid',
+                'alt' => 'field_image_alt',
+                'title' => 'field_image_title',
+                'width' => 'field_image_width',
+                'height' => 'field_image_height',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'entity_types' => array(),
+      'translatable' => '0',
+      'foreign keys' => array(
+        'fid' => array(
+          'table' => 'file_managed',
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+        ),
+      ),
+      'field_name' => 'field_image',
+      'type' => 'image',
+      'module' => 'image',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'columns' => array(
+        'fid' => array(
+          'description' => 'The {file_managed}.fid being referenced in this field.',
+          'type' => 'int',
+          'not null' => FALSE,
+          'unsigned' => TRUE,
+        ),
+        'alt' => array(
+          'description' => 'Alternative image text, for the image\'s \'alt\' attribute.',
+          'type' => 'varchar',
+          'length' => 512,
+          'not null' => FALSE,
+        ),
+        'title' => array(
+          'description' => 'Image title text, for the image\'s \'title\' attribute.',
+          'type' => 'varchar',
+          'length' => 1024,
+          'not null' => FALSE,
+        ),
+        'width' => array(
+          'description' => 'The width of the image in pixels.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+        ),
+        'height' => array(
+          'description' => 'The height of the image in pixels.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'article',
+          1 => 'home_feature',
+          2 => 'property',
+        ),
+      ),
+    ),
+    'field_listing_type' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'listing_type',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_listing_type' => array(
+                'tid' => 'field_listing_type_tid',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_listing_type' => array(
+                'tid' => 'field_listing_type_tid',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'field_name' => 'field_listing_type',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'tid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_local_features_feed' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'local_features',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_local_features_feed' => array(
+                'tid' => 'field_local_features_feed_tid',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_local_features_feed' => array(
+                'tid' => 'field_local_features_feed_tid',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'field_name' => 'field_local_features_feed',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'tid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_lot_size' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'decimal_separator' => '.',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_lot_size' => array(
+                'value' => 'field_lot_size_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_lot_size' => array(
+                'value' => 'field_lot_size_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'field_name' => 'field_lot_size',
+      'type' => 'number_float',
+      'module' => 'number',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'float',
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_price' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'decimal_separator' => ',',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_price' => array(
+                'value' => 'field_price_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_price' => array(
+                'value' => 'field_price_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'field_name' => 'field_price',
+      'type' => 'number_float',
+      'module' => 'number',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'float',
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_promote_to_home_slideshow' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          'Yes' => 'Yes',
+          'No' => 'No',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_promote_to_home_slideshow' => array(
+                'value' => 'field_promote_to_home_slideshow_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_promote_to_home_slideshow' => array(
+                'value' => 'field_promote_to_home_slideshow_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'field_name' => 'field_promote_to_home_slideshow',
+      'type' => 'list_text',
+      'module' => 'list',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_property_special_tag' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          'featured' => 'Featured',
+          'new' => 'New Sale',
+          'reduced' => 'Reduced',
+          'sold' => 'Sold',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_property_special_tag' => array(
+                'value' => 'field_property_special_tag_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_property_special_tag' => array(
+                'value' => 'field_property_special_tag_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'field_name' => 'field_property_special_tag',
+      'type' => 'list_text',
+      'module' => 'list',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_property_type' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'property_type',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_property_type' => array(
+                'tid' => 'field_property_type_tid',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_property_type' => array(
+                'tid' => 'field_property_type_tid',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'field_name' => 'field_property_type',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'tid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_ref' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_ref' => array(
+                'value' => 'field_ref_value',
+                'format' => 'field_ref_format',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_ref' => array(
+                'value' => 'field_ref_value',
+                'format' => 'field_ref_format',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'table' => 'filter_format',
+          'columns' => array(
+            'format' => 'format',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'field_name' => 'field_ref',
+      'type' => 'text',
+      'module' => 'text',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'varchar',
+          'length' => '255',
+          'not null' => FALSE,
+        ),
+        'format' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_sq_ft_' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'decimal_separator' => '.',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_sq_ft_' => array(
+                'value' => 'field_sq_ft__value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_sq_ft_' => array(
+                'value' => 'field_sq_ft__value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'field_name' => 'field_sq_ft_',
+      'type' => 'number_float',
+      'module' => 'number',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'float',
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_status' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'status',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_status' => array(
+                'tid' => 'field_status_tid',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_status' => array(
+                'tid' => 'field_status_tid',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'field_name' => 'field_status',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'tid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+    'field_year' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          1960 => '1960',
+          1961 => '1961',
+          1962 => '1962',
+          1963 => '1963',
+          1964 => '1964',
+          1965 => '1965',
+          1966 => '1966',
+          1967 => '1967',
+          1968 => '1968',
+          1969 => '1969',
+          1970 => '1970',
+          1971 => '1971',
+          1972 => '1972',
+          1973 => '1973',
+          1974 => '1974',
+          1975 => '1975',
+          1976 => '1976',
+          1977 => '1977',
+          1978 => '1978',
+          1979 => '1979',
+          1980 => '1980',
+          1981 => '1981',
+          1982 => '1982',
+          1983 => '1983',
+          1984 => '1984',
+          1985 => '1985',
+          1986 => '1986',
+          1987 => '1987',
+          1988 => '1988',
+          1989 => '1989',
+          1990 => '1990',
+          1991 => '1991',
+          1992 => '1992',
+          1993 => '1993',
+          1994 => '1994',
+          1995 => '1995',
+          1996 => '1996',
+          1997 => '1997',
+          1998 => '1998',
+          1999 => '1999',
+          2000 => '2000',
+          2001 => '2001',
+          2002 => '2002',
+          2003 => '2003',
+          2004 => '2004',
+          2005 => '2005',
+          2006 => '2006',
+          2007 => '2007',
+          2008 => '2008',
+          2009 => '2009',
+          2010 => '2010',
+          2011 => '2011',
+          2012 => '2012',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_year' => array(
+                'value' => 'field_year_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_year' => array(
+                'value' => 'field_year_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'field_name' => 'field_year',
+      'type' => 'list_integer',
+      'module' => 'list',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'property',
+        ),
+      ),
+    ),
+  ),
+  'instances' => array(
+    'body' => array(
+      0 => array(
+        'label' => 'Description',
+        'widget' => array(
+          'weight' => '4',
+          'type' => 'text_textarea_with_summary',
+          'module' => 'text',
+          'active' => 1,
+          'settings' => array(
+            'rows' => '20',
+            'summary_rows' => 5,
+          ),
+        ),
+        'settings' => array(
+          'text_processing' => '1',
+          'display_summary' => 0,
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'hidden',
+            'type' => 'text_default',
+            'weight' => '3',
+            'settings' => array(),
+            'module' => 'text',
+          ),
+          'teaser' => array(
+            'label' => 'hidden',
+            'type' => 'text_summary_or_trimmed',
+            'settings' => array(
+              'trim_length' => 600,
+            ),
+            'module' => 'text',
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'hidden',
+            'type' => 'hidden',
+            'weight' => '8',
+            'settings' => array(),
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'body',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_agent' => array(
+      0 => array(
+        'label' => 'Agent',
+        'widget' => array(
+          'weight' => '6',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'hidden',
+            'type' => 'hidden',
+            'weight' => '16',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'hidden',
+            'type' => 'hidden',
+            'weight' => '11',
+            'settings' => array(),
+          ),
+        ),
+        'required' => 0,
+        'description' => 'If this Property belongs to an Agent, please select it.',
+        'default_value' => NULL,
+        'field_name' => 'field_agent',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_bathrooms' => array(
+      0 => array(
+        'label' => 'Bathrooms',
+        'widget' => array(
+          'weight' => '20',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'inline',
+            'type' => 'taxonomy_term_reference_plain',
+            'weight' => '8',
+            'settings' => array(),
+            'module' => 'taxonomy',
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'inline',
+            'type' => 'taxonomy_term_reference_plain',
+            'weight' => '4',
+            'settings' => array(),
+            'module' => 'taxonomy',
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_bathrooms',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_bedrooms' => array(
+      0 => array(
+        'label' => 'Bedrooms',
+        'widget' => array(
+          'weight' => '19',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'inline',
+            'type' => 'taxonomy_term_reference_plain',
+            'weight' => '9',
+            'settings' => array(),
+            'module' => 'taxonomy',
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'inline',
+            'type' => 'taxonomy_term_reference_plain',
+            'weight' => '5',
+            'settings' => array(),
+            'module' => 'taxonomy',
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_bedrooms',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_cee_epc' => array(
+      0 => array(
+        'label' => 'CEE/EPC',
+        'widget' => array(
+          'weight' => '19',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'inline',
+            'type' => 'list_default',
+            'weight' => '10',
+            'settings' => array(),
+            'module' => 'list',
+          ),
+          'full' => array(
+            'label' => 'inline',
+            'type' => 'list_default',
+            'weight' => '6',
+            'settings' => array(),
+            'module' => 'list',
+          ),
+          'teaser' => array(
+            'label' => 'inline',
+            'type' => 'list_default',
+            'weight' => '10',
+            'settings' => array(),
+            'module' => 'list',
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_cee_epc',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_garages' => array(
+      0 => array(
+        'label' => 'Garages',
+        'widget' => array(
+          'weight' => '23',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'inline',
+            'type' => 'hidden',
+            'weight' => '17',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'inline',
+            'type' => 'hidden',
+            'weight' => '12',
+            'settings' => array(),
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_garages',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_home_features' => array(
+      0 => array(
+        'label' => 'Home Features',
+        'widget' => array(
+          'weight' => '24',
+          'type' => 'taxonomy_autocomplete',
+          'module' => 'taxonomy',
+          'active' => 0,
+          'settings' => array(
+            'size' => 60,
+            'autocomplete_path' => 'taxonomy/autocomplete',
+          ),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'hidden',
+            'type' => 'taxonomy_term_reference_plain',
+            'weight' => '4',
+            'settings' => array(),
+            'module' => 'taxonomy',
+          ),
+          'full' => array(
+            'label' => 'hidden',
+            'type' => 'hidden',
+            'weight' => '10',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'label' => 'hidden',
+            'type' => 'taxonomy_term_reference_plain',
+            'weight' => '4',
+            'settings' => array(),
+            'module' => 'taxonomy',
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_home_features',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_image' => array(
+      0 => array(
+        'label' => 'Property Photos',
+        'widget' => array(
+          'weight' => '5',
+          'type' => 'image_image',
+          'module' => 'image',
+          'active' => 1,
+          'settings' => array(
+            'progress_indicator' => 'throbber',
+            'preview_image_style' => 'thumbnail',
+          ),
+        ),
+        'settings' => array(
+          'file_directory' => '',
+          'file_extensions' => 'png gif jpg jpeg',
+          'max_filesize' => '',
+          'max_resolution' => '',
+          'min_resolution' => '',
+          'alt_field' => 0,
+          'title_field' => 0,
+          'default_image' => 0,
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'image',
+            'settings' => array(
+              'image_style' => '',
+              'image_link' => '',
+            ),
+            'module' => 'image',
+            'weight' => 24,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'field_name' => 'field_image',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_listing_type' => array(
+      0 => array(
+        'label' => 'Listing Type',
+        'widget' => array(
+          'weight' => '22',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'inline',
+            'type' => 'hidden',
+            'weight' => '21',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'inline',
+            'type' => 'hidden',
+            'weight' => '16',
+            'settings' => array(),
+          ),
+        ),
+        'required' => 0,
+        'description' => 'New Sale, Foreclosure...',
+        'default_value' => NULL,
+        'field_name' => 'field_listing_type',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_local_features_feed' => array(
+      0 => array(
+        'label' => 'local features',
+        'widget' => array(
+          'weight' => '25',
+          'type' => 'taxonomy_autocomplete',
+          'module' => 'taxonomy',
+          'active' => 0,
+          'settings' => array(
+            'size' => 60,
+            'autocomplete_path' => 'taxonomy/autocomplete',
+          ),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'hidden',
+            'type' => 'taxonomy_term_reference_plain',
+            'weight' => '5',
+            'settings' => array(),
+            'module' => 'taxonomy',
+          ),
+          'full' => array(
+            'label' => 'hidden',
+            'type' => 'hidden',
+            'weight' => '9',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'label' => 'hidden',
+            'type' => 'taxonomy_term_reference_plain',
+            'weight' => '5',
+            'settings' => array(),
+            'module' => 'taxonomy',
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_local_features_feed',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_lot_size' => array(
+      0 => array(
+        'label' => 'Plot Size',
+        'widget' => array(
+          'weight' => '22',
+          'type' => 'number',
+          'module' => 'number',
+          'active' => 0,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'min' => '',
+          'max' => '',
+          'prefix' => '',
+          'suffix' => '',
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'inline',
+            'type' => 'number_decimal',
+            'weight' => '11',
+            'settings' => array(
+              'thousand_separator' => ' ',
+              'decimal_separator' => '.',
+              'scale' => 2,
+              'prefix_suffix' => TRUE,
+            ),
+            'module' => 'number',
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'inline',
+            'type' => 'number_decimal',
+            'weight' => '7',
+            'settings' => array(
+              'thousand_separator' => ' ',
+              'decimal_separator' => '.',
+              'scale' => 2,
+              'prefix_suffix' => TRUE,
+            ),
+            'module' => 'number',
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_lot_size',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_price' => array(
+      0 => array(
+        'label' => 'Price',
+        'widget' => array(
+          'weight' => '20',
+          'type' => 'number',
+          'module' => 'number',
+          'active' => 0,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'min' => '0',
+          'max' => '',
+          'prefix' => '€',
+          'suffix' => '',
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'inline',
+            'type' => 'number_decimal',
+            'weight' => '5',
+            'settings' => array(
+              'thousand_separator' => ' ',
+              'decimal_separator' => '.',
+              'scale' => 2,
+              'prefix_suffix' => TRUE,
+            ),
+            'module' => 'number',
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'inline',
+            'type' => 'number_decimal',
+            'weight' => '2',
+            'settings' => array(
+              'thousand_separator' => ' ',
+              'decimal_separator' => '.',
+              'scale' => 2,
+              'prefix_suffix' => TRUE,
+            ),
+            'module' => 'number',
+          ),
+        ),
+        'required' => 0,
+        'description' => 'Insert the value w/out commas or points.',
+        'default_value' => NULL,
+        'field_name' => 'field_price',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_promote_to_home_slideshow' => array(
+      0 => array(
+        'label' => 'Promote to Home Slideshow',
+        'widget' => array(
+          'weight' => '2',
+          'type' => 'options_buttons',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'hidden',
+            'weight' => '22',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'above',
+            'type' => 'hidden',
+            'weight' => '17',
+            'settings' => array(),
+          ),
+        ),
+        'required' => 0,
+        'description' => 'Only 5 Properties can be shown at the SlideShow.',
+        'default_value' => array(
+          0 => array(
+            'value' => 'No',
+          ),
+        ),
+        'field_name' => 'field_promote_to_home_slideshow',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_property_special_tag' => array(
+      0 => array(
+        'label' => 'Property Special Tag',
+        'widget' => array(
+          'weight' => '23',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'hidden',
+            'weight' => '20',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'above',
+            'type' => 'hidden',
+            'weight' => '15',
+            'settings' => array(),
+          ),
+        ),
+        'required' => 0,
+        'description' => 'This will allow you to TAG the Property on the Listings.',
+        'default_value' => NULL,
+        'field_name' => 'field_property_special_tag',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_property_type' => array(
+      0 => array(
+        'label' => 'Property Type',
+        'widget' => array(
+          'weight' => '17',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'inline',
+            'type' => 'taxonomy_term_reference_plain',
+            'weight' => '7',
+            'settings' => array(),
+            'module' => 'taxonomy',
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'inline',
+            'type' => 'taxonomy_term_reference_plain',
+            'weight' => '3',
+            'settings' => array(),
+            'module' => 'taxonomy',
+          ),
+        ),
+        'required' => 0,
+        'description' => 'Residential, Condominium...',
+        'default_value' => NULL,
+        'field_name' => 'field_property_type',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_ref' => array(
+      0 => array(
+        'label' => 'Ref',
+        'widget' => array(
+          'weight' => '15',
+          'type' => 'text_textfield',
+          'module' => 'text',
+          'active' => 1,
+          'settings' => array(
+            'size' => '60',
+          ),
+        ),
+        'settings' => array(
+          'text_processing' => '0',
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'text_default',
+            'weight' => '4',
+            'settings' => array(),
+            'module' => 'text',
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'above',
+            'type' => 'text_default',
+            'weight' => '1',
+            'settings' => array(),
+            'module' => 'text',
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_ref',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_sq_ft_' => array(
+      0 => array(
+        'label' => 'Sq. Mtrs.',
+        'widget' => array(
+          'weight' => '21',
+          'type' => 'number',
+          'module' => 'number',
+          'active' => 0,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'min' => '',
+          'max' => '',
+          'prefix' => '',
+          'suffix' => '',
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'inline',
+            'type' => 'hidden',
+            'weight' => '23',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'inline',
+            'type' => 'hidden',
+            'weight' => '18',
+            'settings' => array(),
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_sq_ft_',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_status' => array(
+      0 => array(
+        'label' => 'Status',
+        'widget' => array(
+          'weight' => '21',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'inline',
+            'type' => 'hidden',
+            'weight' => '19',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'inline',
+            'type' => 'hidden',
+            'weight' => '14',
+            'settings' => array(),
+          ),
+        ),
+        'required' => 0,
+        'description' => 'For Rent/For Sale',
+        'default_value' => NULL,
+        'field_name' => 'field_status',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+    'field_year' => array(
+      0 => array(
+        'label' => 'Year',
+        'widget' => array(
+          'weight' => '18',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'inline',
+            'type' => 'hidden',
+            'weight' => '18',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'inline',
+            'type' => 'hidden',
+            'weight' => '13',
+            'settings' => array(),
+          ),
+        ),
+        'required' => 0,
+        'description' => 'The year when the property was built. <em>2012, 20170, 1985, 1985, etc.</em>',
+        'default_value' => array(
+          0 => array(
+            'value' => '2010',
+          ),
+        ),
+        'field_name' => 'field_year',
+        'entity_type' => 'node',
+        'bundle' => 'property',
+        'deleted' => '0',
+      ),
+    ),
+  ),
+  'fieldgroups' => array(
+    'group_details|node|car|default' => (object) array(
+      'id' => '5',
+      'identifier' => 'group_details|node|car|default',
+      'group_name' => 'group_details',
+      'entity_type' => 'node',
+      'bundle' => 'property',
+      'mode' => 'default',
+      'parent_name' => '',
+      'table' => 'field_group',
+      'type' => 'Normal',
+      'export_type' => 1,
+      'label' => 'Property Detials',
+      'weight' => '2',
+      'children' => array(
+        0 => 'field_price',
+        1 => 'field_bathrooms',
+        2 => 'field_bedrooms',
+        3 => 'field_property_type',
+        4 => 'field_lot_size',
+        5 => 'field_ref',
+        6 => 'field_cee_epc',
+      ),
+      'format_type' => 'div',
+      'format_settings' => array(
+        'label' => 'Property Detials',
+        'instance_settings' => array(
+          'id' => 'node_property_full_group_details',
+          'classes' => ' group-details field-group-div',
+          'description' => '',
+          'show_label' => '1',
+          'label_element' => 'h2',
+          'effect' => 'none',
+          'speed' => 'fast',
+        ),
+        'formatter' => 'open',
+      ),
+    ),
+    'group_more_details|node|property|default' => (object) array(
+      'id' => '15',
+      'identifier' => 'group_more_details|node|property|default',
+      'group_name' => 'group_more_details',
+      'entity_type' => 'node',
+      'bundle' => 'property',
+      'mode' => 'default',
+      'parent_name' => '',
+      'table' => 'field_group',
+      'type' => 'Normal',
+      'export_type' => 1,
+      'disabled' => FALSE,
+      'label' => 'More Details',
+      'weight' => '3',
+      'children' => array(
+        0 => 'group_prop_details',
+        1 => 'group_interior',
+        2 => 'group_location',
+        3 => 'group_exterior',
+      ),
+      'format_type' => 'htabs',
+      'format_settings' => array(
+        'formatter' => '',
+        'instance_settings' => array(
+          'classes' => 'group-more-details field-group-htabs',
+        ),
+      ),
+    ),
+    'group_prop_details|node|property|default' => (object) array(
+      'id' => '16',
+      'identifier' => 'group_prop_details|node|property|default',
+      'group_name' => 'group_prop_details',
+      'entity_type' => 'node',
+      'bundle' => 'property',
+      'mode' => 'default',
+      'parent_name' => 'group_more_details',
+      'table' => 'field_group',
+      'type' => 'Normal',
+      'export_type' => 1,
+      'disabled' => FALSE,
+      'label' => 'Details',
+      'weight' => '2',
+      'children' => array(
+        0 => 'body',
+      ),
+      'format_type' => 'htab',
+      'format_settings' => array(
+        'formatter' => 'closed',
+        'instance_settings' => array(
+          'description' => '',
+          'classes' => 'group-prop-details field-group-htab',
+          'id' => '',
+        ),
+      ),
+    ),
+    'group_interior|node|property|default' => (object) array(
+      'id' => '17',
+      'identifier' => 'group_interior|node|property|default',
+      'group_name' => 'group_interior',
+      'entity_type' => 'node',
+      'bundle' => 'property',
+      'mode' => 'default',
+      'parent_name' => 'group_more_details',
+      'table' => 'field_group',
+      'type' => 'Normal',
+      'export_type' => 1,
+      'disabled' => FALSE,
+      'label' => 'Local Services',
+      'weight' => '3',
+      'children' => array(
+        0 => 'field_local_features_feed',
+      ),
+      'format_type' => 'htab',
+      'format_settings' => array(
+        'label' => 'Local Services',
+        'instance_settings' => array(
+          'id' => '',
+          'classes' => 'group-interior field-group-htab',
+          'description' => '',
+        ),
+        'formatter' => 'closed',
+      ),
+    ),
+    'group_location|node|property|default' => (object) array(
+      'id' => '18',
+      'identifier' => 'group_location|node|property|default',
+      'group_name' => 'group_location',
+      'entity_type' => 'node',
+      'bundle' => 'property',
+      'mode' => 'default',
+      'parent_name' => 'group_more_details',
+      'table' => 'field_group',
+      'type' => 'Normal',
+      'export_type' => 1,
+      'disabled' => FALSE,
+      'label' => 'Location',
+      'weight' => '5',
+      'children' => array(
+        0 => 'location',
+      ),
+      'format_type' => 'htab',
+      'format_settings' => array(
+        'formatter' => 'closed',
+        'instance_settings' => array(
+          'description' => '',
+          'classes' => 'group-location field-group-htab',
+          'id' => '',
+        ),
+      ),
+    ),
+    'group_exterior|node|property|default' => (object) array(
+      'id' => '19',
+      'identifier' => 'group_exterior|node|property|default',
+      'group_name' => 'group_exterior',
+      'entity_type' => 'node',
+      'bundle' => 'property',
+      'mode' => 'default',
+      'parent_name' => 'group_more_details',
+      'table' => 'field_group',
+      'type' => 'Normal',
+      'export_type' => 1,
+      'disabled' => FALSE,
+      'label' => 'Interior Features',
+      'weight' => '4',
+      'children' => array(
+        0 => 'field_home_features',
+      ),
+      'format_type' => 'htab',
+      'format_settings' => array(
+        'label' => 'Interior Features',
+        'instance_settings' => array(
+          'classes' => 'group-exterior field-group-fieldset',
+          'description' => '',
+          'id' => '',
+        ),
+        'formatter' => 'collapsible',
+      ),
+    ),
+    'group_details|node|property|form' => (object) array(
+      'id' => '12',
+      'identifier' => 'group_details|node|property|form',
+      'group_name' => 'group_details',
+      'entity_type' => 'node',
+      'bundle' => 'property',
+      'mode' => 'form',
+      'parent_name' => '',
+      'table' => 'field_group',
+      'type' => 'Normal',
+      'export_type' => 1,
+      'label' => 'Property Details',
+      'weight' => '0',
+      'children' => array(
+        0 => 'field_year',
+        1 => 'field_bathrooms',
+        2 => 'field_bedrooms',
+        3 => 'field_property_type',
+        4 => 'field_sq_ft_',
+        5 => 'field_lot_size',
+        6 => 'field_garages',
+        7 => 'field_ref',
+        8 => 'locations',
+      ),
+      'format_type' => 'fieldset',
+      'format_settings' => array(
+        'formatter' => 'collapsible',
+        'instance_settings' => array(
+          'description' => '',
+          'classes' => ' group-details field-group-fieldset',
+          'required_fields' => 1,
+        ),
+      ),
+    ),
+    'group_listing|node|property|form' => (object) array(
+      'id' => '13',
+      'identifier' => 'group_listing|node|property|form',
+      'group_name' => 'group_listing',
+      'entity_type' => 'node',
+      'bundle' => 'property',
+      'mode' => 'form',
+      'parent_name' => '',
+      'table' => 'field_group',
+      'type' => 'Normal',
+      'export_type' => 1,
+      'label' => 'Listing Details',
+      'weight' => '1',
+      'children' => array(
+        0 => 'field_price',
+        1 => 'field_status',
+        2 => 'field_listing_type',
+        3 => 'field_property_special_tag',
+        4 => 'field_cee_epc',
+        5 => 'title',
+      ),
+      'format_type' => 'fieldset',
+      'format_settings' => array(
+        'formatter' => 'collapsible',
+        'instance_settings' => array(
+          'description' => '',
+          'classes' => ' group-listing field-group-fieldset',
+          'required_fields' => 1,
+        ),
+      ),
+    ),
+    'group_more_details|node|property|form' => (object) array(
+      'id' => '14',
+      'identifier' => 'group_more_details|node|property|form',
+      'group_name' => 'group_more_details',
+      'entity_type' => 'node',
+      'bundle' => 'property',
+      'mode' => 'form',
+      'parent_name' => '',
+      'table' => 'field_group',
+      'type' => 'Normal',
+      'export_type' => 1,
+      'disabled' => FALSE,
+      'label' => 'More Details',
+      'weight' => '8',
+      'children' => array(
+        0 => 'field_home_features',
+        1 => 'field_local_features_feed',
+      ),
+      'format_type' => 'htabs',
+      'format_settings' => array(
+        'formatter' => '',
+        'instance_settings' => array(
+          'classes' => 'group-more-details field-group-htabs',
+        ),
+      ),
+    ),
+    'group_description|node|property|form' => (object) array(
+      'id' => '20',
+      'identifier' => 'group_description|node|property|form',
+      'group_name' => 'group_description',
+      'entity_type' => 'node',
+      'bundle' => 'property',
+      'mode' => 'form',
+      'parent_name' => '',
+      'table' => 'field_group',
+      'type' => 'Normal',
+      'export_type' => 1,
+      'disabled' => FALSE,
+      'label' => 'Description',
+      'weight' => '3',
+      'children' => array(
+        0 => 'body',
+        1 => 'field_image',
+      ),
+      'format_type' => 'fieldset',
+      'format_settings' => array(
+        'formatter' => 'collapsible',
+        'instance_settings' => array(
+          'description' => '',
+          'classes' => 'group-description field-group-fieldset',
+          'required_fields' => 1,
+        ),
+      ),
+    ),
+  ),
+);
